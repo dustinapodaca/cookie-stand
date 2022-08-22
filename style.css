@@ -1,0 +1,51 @@
+h1 {
+  font-family: 'Manrope', sans-serif;
+  border: thin solid black;
+  padding: 15px;
+  margin: auto;
+  width: 55%;
+  text-align: center;
+  color: rgb(70, 27, 17);
+  background-color: rgb(224, 192, 152);
+  
+}
+
+h2 {
+  font-family: 'Manrope', sans-serif;
+  border: thin solid black;
+  padding: 15px;
+  margin: auto;
+  width: 25%;
+  text-align: center;
+  color: rgb(70, 27, 17);
+  background-color: rgb(224, 192, 152);
+}
+
+section {
+  text-align: left;
+}
+
+body {
+  background-color: burlywood;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 50%;
+}
+
+p {
+  margin-top: 45px;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+  color:rgb(105, 47, 34);
+  padding-bottom: 15px;
+}
