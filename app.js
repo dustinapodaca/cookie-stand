@@ -2,50 +2,52 @@
 
 let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-class Store {
-  constructor(name, minCustPerHour, maxCustPerHour, avgCookiePerCust) {
-    this.name = name;
-    this.minCustPerHour = minCustPerHour;
-    this.maxCustPerHour = maxCustPerHour;
-    this.avgCookiePerCust = avgCookiePerCust;
-    this.cookiesPerHour = [];
-    this.totalDailyCookies = 0;
-    this.display();
-  }
-  generateRandomCustomers() {
-    return Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour);
-  }
-  generateCookiePerHour() {
-    for (let i = 0; i < storeHours.length; i++) {
-      let custPerHour = this.generateRandomCustomers();
-      let amountCookiesSold = Math.ceil(custPerHour * this.avgCookiePerCust);
-      this.cookiesPerHour.push(amountCookiesSold); //push into array
-      this.totalDailyCookies += amountCookiesSold;
-      //console.log(`The ${this.name} store had ${custPerHour} customers during this hour and sold a total of ${amountCookiesSold} cookies.`);
-      //console.log(this.cookiesPerHour);
-    }
-  }
-  display() {
-    this.generateCookiePerHour();
-    let tableBody = document.getElementById('data');
-    let tr = document.createElement('tr');
-    tableBody.appendChild(tr);
+function Store (name, minCustPerHour, maxCustPerHour, avgCookiePerCust) {
+  this.name = name;
+  this.minCustPerHour = minCustPerHour;
+  this.maxCustPerHour = maxCustPerHour;
+  this.avgCookiePerCust = avgCookiePerCust;
+  this.cookiesPerHour = [];
+  this.totalDailyCookies = 0;
+  this.display();
+}
 
-    let th = document.createElement('th');
-    th.textContent = this.name;
-    tr.appendChild(th);
+Store.prototype.generateRandomCustomers = function () {
+  return Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour);
+};
 
-    for (let i = 0; i < storeHours.length; i++) {
-      let td = document.createElement('td');
-      td.textContent = this.cookiesPerHour[i];
-      tr.appendChild(td);
-    }
+Store.prototype.generateCookiePerHour = function () {
+  for (let i = 0; i < storeHours.length; i++) {
+    let custPerHour = this.generateRandomCustomers();
+    let amountCookiesSold = Math.ceil(custPerHour * this.avgCookiePerCust);
+    this.cookiesPerHour.push(amountCookiesSold); //push into array
+    this.totalDailyCookies += amountCookiesSold;
+    //console.log(`The ${this.name} store had ${custPerHour} customers during this hour and sold a total of ${amountCookiesSold} cookies.`);
+    //console.log(this.cookiesPerHour);
+  }
+};
 
+Store.prototype.display = function () {
+  this.generateCookiePerHour();
+  let tableBody = document.getElementById('data');
+  let tr = document.createElement('tr');
+  tableBody.appendChild(tr);
+
+  let th = document.createElement('th');
+  th.textContent = this.name;
+  tr.appendChild(th);
+
+  for (let i = 0; i < storeHours.length; i++) {
     let td = document.createElement('td');
-    td.textContent = this.totalDailyCookies;
+    td.textContent = this.cookiesPerHour[i];
     tr.appendChild(td);
   }
-}
+
+  let td = document.createElement('td');
+  td.textContent = this.totalDailyCookies;
+  tr.appendChild(td);
+};
+
 
 let headRow = function () {
   let tableBody = document.getElementById('data');
