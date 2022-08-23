@@ -47,18 +47,37 @@ class Store {
   }
 }
 
+let headRow = function () {
+  let tableBody = document.getElementById('data');
+  let thead = document.createElement('thead');
+  tableBody.appendChild(thead);
 
+  let tr = document.createElement('tr');
+  thead.appendChild(tr);
 
+  let th = document.createElement('th');
+  th.textContent = '';
+  tr.appendChild(th);
 
+  for (let i = 0; i < storeHours.length; i++) {
+    let td = document.createElement('td');
+    td.textContent = storeHours[i];
+    tr.appendChild(td);
+  }
+  let td = document.createElement('td');
+  td.textContent = ('Daily Total Sales');
+  tr.appendChild(td);
+};
 
-
-
+headRow();
 
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
 new Store('Paris', 20, 38, 2.3);
 new Store('Lima', 2, 16, 4.6);
+
+
 
 
 
