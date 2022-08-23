@@ -21,6 +21,15 @@ h2 {
   background-color: rgb(224, 192, 152);
 }
 
+table {
+  color: rgb(70, 27, 17);
+  background-color: rgb(224, 192, 152);
+  border: thin solid black;
+  padding: 8px;
+  margin: auto;
+
+}
+
 section {
   text-align: left;
 }
