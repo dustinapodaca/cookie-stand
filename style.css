@@ -29,14 +29,16 @@ table {
   color: rgb(70, 27, 17);
   background-color: rgb(224, 192, 152);
   border: thin solid black;
-  padding: 15px;
+  padding: 20px;
   margin: auto;
 }
 
 th {
   border: thin solid black;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(207, 173, 133);
+
 
 }
 
