@@ -63,7 +63,7 @@ let hoursRow = function () {
   tr.appendChild(th);
 
   for (let i = 0; i < storeHours.length; i++) {
-    let td = document.createElement('td');
+    let td = document.createElement('th');
     td.textContent = storeHours[i];
     tr.appendChild(td);
   }
@@ -94,9 +94,17 @@ let totalsRow = function () {
     cell.textContent = salesAtHour;
     row.appendChild(cell);
   }
+  // now add the grandTotal
+  let cell = document.createElement('th');
+  let grandTotals = 0;
+  for (let store of allStores) {
+    grandTotals += store.totalDailyCookies;
 
-
+  }
+  cell.textContent = grandTotals;
+  row.appendChild(cell);
 };
+
 
 let allStores = [];
 
