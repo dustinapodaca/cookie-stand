@@ -2,7 +2,7 @@
 
 let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-function Store (name, minCustPerHour, maxCustPerHour, avgCookiePerCust) {
+function Store(name, minCustPerHour, maxCustPerHour, avgCookiePerCust) {
   this.name = name;
   this.minCustPerHour = minCustPerHour;
   this.maxCustPerHour = maxCustPerHour;
@@ -10,6 +10,7 @@ function Store (name, minCustPerHour, maxCustPerHour, avgCookiePerCust) {
   this.cookiesPerHour = [];
   this.totalDailyCookies = 0;
   this.display();
+  allStores.push(this);
 }
 
 Store.prototype.generateRandomCustomers = function () {
@@ -49,7 +50,7 @@ Store.prototype.display = function () {
 };
 
 
-let headRow = function () {
+let hoursRow = function () {
   let tableBody = document.getElementById('data');
   let thead = document.createElement('thead');
   tableBody.appendChild(thead);
@@ -66,20 +67,46 @@ let headRow = function () {
     td.textContent = storeHours[i];
     tr.appendChild(td);
   }
-  let td = document.createElement('td');
+  let td = document.createElement('th');
   td.textContent = ('Daily Total Sales');
   tr.appendChild(td);
 };
 
-headRow();
+let totalsRow = function () {
+  let tableBody = document.getElementById('data');
+  let row = document.createElement('tr');
+  let head = document.createElement('th');
+  head.textContent = 'Total Hourly Sales';
+  row.appendChild(head);
+  tableBody.appendChild(row);
 
+  // outer loop through hours
+  for (let hour in storeHours) {
+    let salesAtHour = 0;
+    let cell = document.createElement('td');
+    //inner loop through stores
+    for (let store in allStores) {
+      let currentStore = allStores[store];
+      let currentSales = currentStore.cookiesPerHour[hour];
+      salesAtHour += currentSales;
+
+    }
+    cell.textContent = salesAtHour;
+    row.appendChild(cell);
+  }
+
+
+};
+
+let allStores = [];
+
+hoursRow();
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
 new Store('Paris', 20, 38, 2.3);
 new Store('Lima', 2, 16, 4.6);
-
-
+totalsRow();
 
 
 
