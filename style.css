@@ -1,14 +1,14 @@
 body {
-  background-color: burlywood;
+  background-color: rgb(244, 216, 184);
   font-family: 'Helvetica', 'Arial', sans-serif;
   text-align: center;
 }
 
 header {
   display: block;
-  border: thin solid black;
-  background-color: rgb(224, 192, 152); 
-  width: 75%;
+  border: 2px solid rgb(70, 27, 17);
+  background-color: rgb(247, 228, 202);
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -41,4 +41,39 @@ h2 {
   color: rgb(70, 27, 17);
   background-color: rgb(224, 192, 152);
 }
+
+.sub-banner {
+  display: flex;
+  background-color: rgb(247, 228, 202);
+  border: 2px solid rgb(70, 27, 17);
+  margin: 10px auto;
+  align-items: center;
+  justify-content: space-evenly;
+  object-fit: cover;
+  width: 95%;
+  height: 150px;
+  overflow: hidden;
+}
+
+#three-fish {
+  max-width: 100%;
+  max-height: 100%;
+  mix-blend-mode: multiply;
+}
+
+#cutter {
+  border-radius: 50%;
+  border: 2px solid rgb(70, 27, 17);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#shirt {
+  max-width: 100%;
+  max-height: 100%;
+  mix-blend-mode: multiply;
+}
+
+
+
 
