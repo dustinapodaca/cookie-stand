@@ -14,18 +14,32 @@
   </header>
   <main>
     <table id="data">
-      <thead>
+      <thead id="hoursRow">
         <tr>
           <th colspan="16">Daily Cookie Sales By The Hour</th>
         </tr>
       </thead>
+      <tbody id="mainInfo"></tbody>
+      <tfoot id="totalsRow"></tfoot>
     </table>
   <section>
     <form id="cookies-form">
-      <input name="cust_name" type="text">
-      <input name="cookie_type" type="text">
-      <input name="cookie_quantity" type="number">
-      <button type="submit">Submit Form</button>
+      <fieldset>
+        <legend>Add New Cookie Store Location</legend>
+        <label>Location Name:
+          <input type="text" name="location" required="required">
+        </label>
+        <label>Minimum Expected Customers per Hour:
+          <input type="number" name="minCust" required="required">
+        </label>
+        <label>Maximum Expected Customers per Hour:
+          <input type="number" name="maxCust" required="required">
+        </label>
+        <label>Estimated Average Cookies Per Customer:
+          <input type="number" step="any" name="avgCookies" required="required">
+        </label>
+        <button type="submit" onclick="alert('Thank you for your submission!')">Submit</button>
+      </fieldset>
     </form>
   </section>
     <nav>
