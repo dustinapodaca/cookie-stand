@@ -119,11 +119,18 @@ totalsRow();
 
 let cookieForm = document.getElementById('cookies-form');
 
+function Cookies(name, type, quantity) {
+  this.name = name;
+  this.type = type;
+  this.quantity = quantity;
+}
+
+
 cookieForm.addEventListener('submit', function (event) {
   event.preventDefault();
-  console.log(event.target.cust_name);
-  console.log(event.target.cookie_type);
-  console.log(event.target.cookie_quantity);
+  console.log(event.target.cust_name.value);
+  console.log(event.target.cookie_type.value);
+  console.log(event.target.cookie_quantity.value);
   console.log('form submitted');
 });
 

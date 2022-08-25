@@ -3,29 +3,36 @@
 <head>
   <title>Sales Data</title>
   <link rel="stylesheet" href="style-sales.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+  </style>
 </head>
-  <nav>
-    <a href="index.html">Take Me Back!</a>
-  </nav>
-  <body>
-    <main>
-      <table id="data">
-        <thead>
-          <tr>
-            <th colspan="16">Daily Cookie Sales By The Hour</th>
-          </tr>
-        </thead>
-      </table>
-    <section>
-      <form id="cookies-form">
-        <input name="cust_name" type="text">
-        <input name="cookie_type" type="text">
-        <input name="cookie_quantity" type="number">
-        <button type="submit">Submit Form</button>
-      </form>
-    </section>
+<body>
+  <header>
+    <img src="./assets/images/salmon.png" id="header-salmon">
+    <h1>Pat's Salmon Cookies Sales Data</h1>
+  </header>
+  <main>
+    <table id="data">
+      <thead>
+        <tr>
+          <th colspan="16">Daily Cookie Sales By The Hour</th>
+        </tr>
+      </thead>
+    </table>
+  <section>
+    <form id="cookies-form">
+      <input name="cust_name" type="text">
+      <input name="cookie_type" type="text">
+      <input name="cookie_quantity" type="number">
+      <button type="submit">Submit Form</button>
+    </form>
+  </section>
+    <nav>
+      <a href="index.html">Take Me Back!</a>
+    </nav>
 
-    </main>
-  </body>
+  </main>
+</body>
 <script src="app.js"></script>
 </html>
