@@ -31,17 +31,6 @@ h1 {
 
 }
 
-h2 {
-  font-family: 'Manrope', sans-serif;
-  border: thin solid black;
-  padding: 15px;
-  margin: auto;
-  width: 25%;
-  text-align: center;
-  color: rgb(70, 27, 17);
-  background-color: rgb(224, 192, 152);
-}
-
 .sub-banner {
   display: flex;
   background-color: rgb(247, 228, 202);
@@ -74,6 +63,59 @@ h2 {
   mix-blend-mode: multiply;
 }
 
+.featured-section {
+  display: flex;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 95%;
+}
+
+h2 {
+  display: inline-block;
+  border-bottom: 2px solid rgb(70, 27, 17);
+  background-color: rgb(247, 228, 202);
+  font-family: 'Manrope', sans-serif;
+  color: rgb(70, 27, 17);
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 20px;  
+  text-align: center;
+}
+
+.locations {
+  display: inline-block;
+  border: 2px solid rgb(70, 27, 17);
+  padding-right: 20px;
+  height: auto;
+  width: auto;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.scroll-box {
+  padding: 0px 20px;
+}
+
+.h2locations {
+  border-top: 2px solid rgb(70, 27, 17);
+}
+
+table {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 101.5%;
+  padding: 10px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  align-items: center;
+  background-color: rgb(247, 228, 202);
+  color: rgb(70, 27, 17);
+}
 
 
 
