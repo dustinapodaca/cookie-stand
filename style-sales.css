@@ -1,0 +1,43 @@
+nav {
+  margin-bottom: 20px;
+}
+
+table {
+  color: rgb(70, 27, 17);
+  background-color: rgb(224, 192, 152);
+  border: thin solid black;
+  padding: 20px;
+  margin: auto;
+}
+
+th {
+  border: thin solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(244, 216, 184);
+
+}
+
+td {
+  border: thin solid black;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: rgb(247, 228, 202);
+}
+
+body {
+  background-color: rgb(244, 216, 184);
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+}
+
+p {
+  margin-top: 45px;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+  color: rgb(105, 47, 34);
+  padding-bottom: 15px;
+}
