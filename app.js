@@ -1,5 +1,6 @@
 'use strict';
 
+let allStores = [];
 let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function Store(name, minCustPerHour, maxCustPerHour, avgCookiePerCust) {
@@ -30,7 +31,7 @@ Store.prototype.generateCookiePerHour = function () {
 
 Store.prototype.display = function () {
   this.generateCookiePerHour();
-  let tableBody = document.getElementById('data');
+  let tableBody = document.getElementById('mainInfo');
   let tr = document.createElement('tr');
   tableBody.appendChild(tr);
 
@@ -49,11 +50,8 @@ Store.prototype.display = function () {
   tr.appendChild(td);
 };
 
-
 let hoursRow = function () {
-  let tableBody = document.getElementById('data');
-  let thead = document.createElement('thead');
-  tableBody.appendChild(thead);
+  let thead = document.getElementById('hoursRow');
 
   let tr = document.createElement('tr');
   thead.appendChild(tr);
@@ -73,7 +71,7 @@ let hoursRow = function () {
 };
 
 let totalsRow = function () {
-  let tableBody = document.getElementById('data');
+  let tableBody = document.getElementById('totalsRow');
   let row = document.createElement('tr');
   let head = document.createElement('th');
   head.textContent = 'Total Hourly Sales';
@@ -105,9 +103,6 @@ let totalsRow = function () {
   row.appendChild(cell);
 };
 
-
-let allStores = [];
-
 hoursRow();
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
@@ -116,13 +111,32 @@ new Store('Paris', 20, 38, 2.3);
 new Store('Lima', 2, 16, 4.6);
 totalsRow();
 
+let cookieForm = document.getElementById('cookies-form');
+
+cookieForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  let newLocation = event.target.location.value;
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+  let avgCookies = event.target.avgCookies.value;
+  new Store(newLocation, minCust, maxCust, avgCookies);
+
+  console.log('form submitted');
+  document.getElementById('totalsRow').textContent = '';
+  totalsRow();
+});
 
 
 
 
+/*
 
-
-
+function Cookies(name, type, quantity) {
+  this.name = name;
+  this.type = type;
+  this.quantity = quantity;
+}
+*/
 /*
 Store.prototype.display = function () {
   this.generateCookiePerHour();
