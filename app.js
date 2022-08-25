@@ -117,7 +117,15 @@ new Store('Lima', 2, 16, 4.6);
 totalsRow();
 
 
+let cookieForm = document.getElementById('cookies-form');
 
+cookieForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  console.log(event.target.cust_name);
+  console.log(event.target.cookie_type);
+  console.log(event.target.cookie_quantity);
+  console.log('form submitted');
+});
 
 
 
