@@ -120,6 +120,9 @@ totalsRow();
 
 
 
+
+
+
 /*
 Store.prototype.display = function () {
   this.generateCookiePerHour();
