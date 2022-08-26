@@ -116,9 +116,9 @@ let cookieForm = document.getElementById('cookies-form');
 cookieForm.addEventListener('submit', function (event) {
   event.preventDefault();
   let newLocation = event.target.location.value;
-  let minCust = event.target.minCust.value;
-  let maxCust = event.target.maxCust.value;
-  let avgCookies = event.target.avgCookies.value;
+  let minCust = parseInt(event.target.minCust.value);
+  let maxCust = parseInt(event.target.maxCust.value);
+  let avgCookies = parseInt(event.target.avgCookies.value);
   new Store(newLocation, minCust, maxCust, avgCookies);
 
   console.log('form submitted');
