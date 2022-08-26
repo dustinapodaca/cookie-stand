@@ -124,6 +124,7 @@ cookieForm.addEventListener('submit', function (event) {
   console.log('form submitted');
   document.getElementById('totalsRow').textContent = '';
   totalsRow();
+  document.getElementById('cookies-form').reset();
 });
 
 
