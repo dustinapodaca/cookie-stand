@@ -26,19 +26,22 @@
     <form id="cookies-form">
       <fieldset>
         <legend>Add New Cookie Store Location</legend>
-        <label>Location Name:
+          <label class="locationLabel">Location Name:</label>
           <input type="text" name="location" required="required">
-        </label>
-        <label>Minimum Expected Customers per Hour:
+        <div>
+          <label class="numbersLabel">Min. Expected Customers per Hour:</label>
           <input type="number" name="minCust" required="required">
-        </label>
-        <label>Maximum Expected Customers per Hour:
+        </div>
+        <div>
+          <label class="numbersLabel">Max. Expected Customers per Hour:</label>
           <input type="number" name="maxCust" required="required">
-        </label>
-        <label>Estimated Average Cookies Per Customer:
+        </div>
+        <div>
+          <label class="numbersLabel">Est. Average Cookies Per Customer:</label>
           <input type="number" step="any" name="avgCookies" required="required">
-        </label>
-        <button type="submit" onclick="alert('Thank you for your submission!')">Submit</button>
+        </div>
+        <br>
+          <button type="submit" onclick="alert('Thank you for your submission!')">Submit Location</button>
       </fieldset>
     </form>
   </section>

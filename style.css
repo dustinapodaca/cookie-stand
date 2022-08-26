@@ -10,6 +10,7 @@ header {
   background-color: rgb(247, 228, 202);
   width: 95%;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 #header-salmon {
@@ -41,6 +42,7 @@ h1 {
   width: 95%;
   height: 150px;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 #three-fish {
@@ -90,6 +92,7 @@ h2 {
   height: auto;
   width: auto;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  border-radius: 5px;
 }
 
 .scroll-box {

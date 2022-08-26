@@ -127,16 +127,6 @@ cookieForm.addEventListener('submit', function (event) {
 });
 
 
-
-
-/*
-
-function Cookies(name, type, quantity) {
-  this.name = name;
-  this.type = type;
-  this.quantity = quantity;
-}
-*/
 /*
 Store.prototype.display = function () {
   this.generateCookiePerHour();
@@ -362,9 +352,6 @@ lima.display();
 
 
 */
-
-
-
 
 
 /* Class Notes
