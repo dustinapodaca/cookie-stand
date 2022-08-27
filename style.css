@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(244, 216, 184);
+  background-color: rgb(252, 238, 222);
   font-family: 'Helvetica', 'Arial', sans-serif;
   text-align: center;
 }
@@ -7,7 +7,7 @@ body {
 header {
   display: block;
   border: 2px solid rgb(70, 27, 17);
-  background-color: rgb(247, 228, 202);
+  background-color: rgb(244, 216, 184);
   width: 95%;
   margin: 0 auto;
   border-radius: 5px;
@@ -76,7 +76,7 @@ h1 {
 h2 {
   display: inline-block;
   border-bottom: 2px solid rgb(70, 27, 17);
-  background-color: rgb(247, 228, 202);
+  background-color: rgb(244, 216, 184);
   font-family: 'Manrope', sans-serif;
   color: rgb(70, 27, 17);
   width: 100%;
@@ -97,6 +97,12 @@ h2 {
 
 .scroll-box {
   padding: 0px 20px;
+  font-family: 'Goudy Old Style', 'Big Caslon', 'Times New Roman', serif;
+  font-size: 20px;
+  text-indent: 50px;
+  line-height: 1.4;
+  letter-spacing: 0.7px;
+  background-color: rgb(252, 238, 222);
 }
 
 .h2locations {
